@@ -1,10 +1,9 @@
 package environment;
 
 import java.awt.Color;
-
-import gameCommons.Case;
 import gameCommons.Game;
 import graphicalElements.Element;
+import util.Case;
 
 public class Car {
 	private Game game;
@@ -16,12 +15,16 @@ public class Car {
 
 	//TODO Constructeur(s)
 
-	// on construit une voiture qui va de
+	// on construit une voiture qui va de droite à gauche et une longueur quelconque
 
-	public Car(Game game, Case getBeforeFirstCase, boolean lToR)){
-		//this.game = width
+	public Car(Game game, Case lPos, boolean lToR) {
+		this.game = game;
+		this.leftToRight = lToR;
+		this.leftPosition = lPos;
+		//this.length =
 	}
-	
+
+
 	//TODO : ajout de methodes
 
 	// getter
@@ -30,19 +33,17 @@ public class Car {
 		return length;
 	}
 
-	public Case getLeftPosition() {
-		return leftPosition;
-	}
+	public Case getLeftPosition(){
+        return leftPosition;
+    }
 
 	// setter
-
-	public void setLeftPosition(Case leftPosition) {
-		this.leftPosition = leftPosition;
-	}
 
 	public void setLength(int length) {
 		this.length = length;
 	}
+
+	// methode move
 
 	/* Fourni : addToGraphics() permettant d'ajouter un element graphique correspondant a la voiture*/
 	private void addToGraphics() {
