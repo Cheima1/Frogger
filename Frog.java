@@ -25,7 +25,7 @@ public class Frog implements IFrog {
 
 	public Frog(Game game) {
 		this.game = game; // construit un jeu voulu
-		this.pos = new Case(0, 0); // construit la position initial
+		this.pos = new Case(game.width/2.0, 0); // construit la position initial
 		this.dir = Direction.up; //
 	}
 
