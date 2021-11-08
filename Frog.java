@@ -64,6 +64,9 @@ public class Frog implements IFrog {
 				pos = new Case(pos.absc, pos.ord + 1);
 			}
 		}
+		
+		this.game.testWin();
+		this.game.testLose();
 	}
 }
 
