@@ -21,7 +21,7 @@ public class Car {
 		this.game = game;
 		this.leftToRight = lToR;
 		this.leftPosition = lPos;
-		//this.length =
+		//this.length = random
 	}
 
 
@@ -43,7 +43,30 @@ public class Car {
 		this.length = length;
 	}
 
-	// methode move
+	// Methode move
+	/** 
+	 * Bouge un vehicule selon son sens de circulation
+	 */
+	
+	public void move() {
+		if(leftToRight) {
+			leftPosition = new Case(leftPosition.absc + 1, leftPosition.ord);
+		} else {
+			leftPosition = new Case(lftPosition.absc - 1, leftPosition.ord);
+		}
+	}
+	
+	// Methode accident
+	/**
+	 * Savoir si un grenouille se fait percuter par un vehicule
+	 * @param : une case posG 
+	 * @return : un boolean si la voiture et la grenouille sont sur la même case alors on renvois true, 
+	 * false sinon
+	 */
+	
+	public boolean isAccident(Case posG) {
+		
+	}
 
 	/* Fourni : addToGraphics() permettant d'ajouter un element graphique correspondant a la voiture*/
 	private void addToGraphics() {
