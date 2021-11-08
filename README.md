@@ -1,4 +1,5 @@
 # Frogger
+pat 1 finis
 Changer le move (si tu desire)
 et les TODO dans Game.java (si tu penses que c'est faux)
 
