@@ -65,7 +65,7 @@ public class Car {
 	 */
 	
 	public boolean isAccident(Case posG) {
-		
+		// utiliser isSafe
 	}
 
 	/* Fourni : addToGraphics() permettant d'ajouter un element graphique correspondant a la voiture*/
