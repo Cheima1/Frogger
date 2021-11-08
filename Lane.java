@@ -25,6 +25,9 @@ public class Lane {
 	}
 
 	//methode
+	// move Car sur le plateau
+	// removeCar
+	// 
 
 	public void update() {
 
@@ -42,6 +45,9 @@ public class Lane {
 	}
 
 	// TODO : ajout de methodes
+	
+	
+	
 
 	/*
 	 * Fourni : mayAddCar(), getFirstCase() et getBeforeFirstCase() 
