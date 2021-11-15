@@ -21,7 +21,7 @@ public class Car {
 		this.game = game;
 		this.leftToRight = lToR;
 		this.leftPosition = lPos;
-		//this.length = random
+		this.length = (int) ((java.lang.Math.random() * 3) + 1);
 	}
 
 
