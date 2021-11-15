@@ -70,6 +70,23 @@ public class Car {
 			return true;
 		} else {
 			return false;
+		}
+	}
+		
+	// Methode carAppears
+	/**
+	 * Savoir si un grenouille se fait percuter par un vehicule
+	 * @param : une case posG 
+	 * @return : un boolean si la voiture et la grenouille sont sur la même case alors on renvois true, 
+	 * false sinon
+	 */
+	public boolean carAppears() {
+		int res = leftPosition.absc + length;
+		if (res > 0 || leftPosition.absc < game.width) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/* Fourni : addToGraphics() permettant d'ajouter un element graphique correspondant a la voiture*/
