@@ -15,13 +15,17 @@ public class Lane {
 
 	// TODO : Constructeur(s)
 
-	public Lane(Game game, int ord) {
+	public Lane(Game game, int ord, double density) {
 		this.game = game;
 		this.ord = ord;
-		this.density = game.defaultDensity;
+		this.density = density;
 		// speed
 		// leftToRight
 
+	}
+	
+	public Lane(Game game, int ord) {
+		this(game, ord, game.defaultDensity);
 	}
 
 	//methode
@@ -46,7 +50,18 @@ public class Lane {
 
 	// TODO : ajout de methodes
 	
+	//public void removeCar() {
+	//TODO
+		 
+	 }
+	// public boolean iSafe(Case c){
+		//TODO
+	}
 	
+	// public void toString()
+		//TODO
+
+	// public void moveCarinLane() //TODO
 	
 
 	/*
