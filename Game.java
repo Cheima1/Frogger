@@ -90,8 +90,8 @@ public class Game {
 	 * @return true si la partie est gagnee
 	 */
 	public boolean testWin() {
-		// TODO
-		if (environment.isSafe(frog.getPosition()) && environment.isWinningPosition(frog.getPosition())){
+		// TODO    
+		if (environment.isSafe(frog.getPosition()) || environment.isWinningPosition(frog.getPosition())) {
 			return true;
 		} else {
 			return false;
