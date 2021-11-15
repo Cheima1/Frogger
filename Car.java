@@ -39,9 +39,9 @@ public class Car {
 
 	// setter
 
-	public void setLength(int length) {
+	/*public void setLength(int length) {
 		this.length = length;
-	}
+	}*/
 
 	// Methode move
 	/** 
