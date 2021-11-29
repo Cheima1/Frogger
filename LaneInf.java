@@ -15,8 +15,17 @@ public class LaneInf {
     private double density;
     private int timer;
     private int speed;
+    private int ordonnee;
 
     // Constructeur
+    
+    public Lane (Game game, int ordonnee, double density) {
+        this.game = game;
+        this.ordonnee = ordonnee;
+        this.density = density;
+        
+    }
+        
 
     // Getters & Setters
 
