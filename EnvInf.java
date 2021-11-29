@@ -14,9 +14,22 @@ public class EnvInf implements IEnvironment {
     private Game game;
 
     // Constructeur
+    
+    public EnvInf(Game game){
+        this.game = game;
 
     // Getters & Setters
 
     // Methodes
+        
+    public boolean is WinningPosition(Case c) {
+		
+	}
+	
+	public boolean isSafe(Case c) {
+	}
+	
+	public void update() {
+	}
 
 }
