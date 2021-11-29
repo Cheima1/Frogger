@@ -29,6 +29,11 @@ public class CarInf {
     // Getters & Setters
 
     // TODO : ajout de Methodes
+	    
+    public void move(boolean b) {
+	    
+	    }
+    }
         
     public boolean isAccident(Case posG) {
 		// utiliser isSafe
