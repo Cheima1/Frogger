@@ -54,6 +54,7 @@ public class Car {
 		} else {
 			leftPosition = new Case(lftPosition.absc - 1, leftPosition.ord);
 		}
+		this.addToGraphics();
 	}
 	
 	// Methode accident
@@ -97,7 +98,7 @@ public class Car {
 				color = colorLtR;
 			}
 			game.getGraphic()
-					.add(new Element(leftPosition.absc + i, leftPosition.ord, color));
+				.add(new Element(leftPosition.absc + i, leftPosition.ord, color));
 		}
 	}
 
