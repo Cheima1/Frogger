@@ -34,26 +34,38 @@ public class FrogInf implements IFrog {
     // Methodes
 
     public void move(Direction key) {
-
+        this.direction = key;
         if (key == Direction.left){
-            if(pos.absc > 0) {
-                pos = new Case(pos.absc - 1, pos.ord);
-            }
-        } else if (key == Direction.right){
-            if(pos.absc < game.width - 1){
-                pos = new Case(pos.absc + 1, pos.ord);
-            }
-        } else if (key == Direction.down){
-            if(pos.ord > 0){
-                pos = new Case(pos.absc, pos.ord - 1);
-            }
-        } else if(key == Direction.up) {
-            if (pos.ord < game.height - 1) {
-                pos = new Case(pos.absc, pos.ord + 1);
+            if(position.absc > 0) {
+                position = new Case(position.absc - 1, position.ord);
             }
         }
-
+        
+        else if (key == Direction.right){
+            if(position.absc < game.width - 1){
+                position = new Case(position.absc + 1, position.ord)
+            }
+        }
+        
+        // rien ne change
+        
+        else if (key == Direction.down){
+            if(position.ord > 1){
+                position = new Case(position.absc, position.ord - 1);
+                --this.game.score;
+            }
+        } 
+        else if(key == Direction.up) {
+            positon = new Case(position.absc, position.ord + 1);
+            ++this.game.score;
+            if(this.game.score > this.game.maxScore) {
+                this.game.maxScore = this.game.score;
+                this.game.addLane();
+            }
+        }
+        this.game.getGraphic().add(new Element(position.absc, 1, Color.GREEN));
         this.game.testWin();
         this.game.testLose();
         System.out.println(this.position.absc+""+ this.position + " score :");
 }
+
