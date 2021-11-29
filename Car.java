@@ -17,10 +17,10 @@ public class Car {
 
 	// on construit une voiture qui va de droite à gauche et une longueur quelconque
 
-	public Car(Game game, Case lPos, boolean lToR) {
+	public Car(Game game, Case leftPos, boolean leftToR) {
 		this.game = game;
-		this.leftToRight = lToR;
-		this.leftPosition = lPos;
+		this.leftToRight = leftToR;
+		this.leftPosition = leftPos;
 		this.length = (int) ((java.lang.Math.random() * 3) + 1);
 	}
 
