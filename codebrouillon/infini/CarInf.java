@@ -1,4 +1,4 @@
-package infiniteFrogger;
+//package infiniteFrogger;
 
 import gameCommons.Game;
 import util.Case;
@@ -13,6 +13,8 @@ public class CarInf {
     private Case leftPosition;
     private boolean lefttoRight;
     private int length;
+    private final Color colorLtR;
+    private final Color colorRtL;
 
     // Constructeur
     
@@ -21,6 +23,8 @@ public class CarInf {
        this.length = (int) ((java.lang.Math.random() * 3) + 1);
        this.leftToRight = leftToRight;
        this.leftPosition = ;
+	this.colorLtR = Color.BLACK;
+	this.colorRtL = Color.BLUE;
 
     // Getters & Setters
 
