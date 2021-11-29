@@ -1,10 +1,10 @@
 package gameCommons;
 
-import java.awt.Color;
-import java.util.Random;
-
 import graphicalElements.Element;
 import graphicalElements.IFroggerGraphics;
+
+import java.awt.*;
+import java.util.Random;
 
 public class Game {
 
@@ -76,11 +76,7 @@ public class Game {
 	 * @return true si le partie est perdue
 	 */
 	public boolean testLose() {
-		if (!environment.isSafe(frog.getPosition()) && !environment.isWinningPosition(frog.getPosition())){
-			return true;
-		}else {
-			return false;
-		}
+		return (!environment.isSafe(frog.getPosition()));
 	}
 
 	/**
@@ -90,12 +86,8 @@ public class Game {
 	 * @return true si la partie est gagnee
 	 */
 	public boolean testWin() {
-		// TODO    
-		if (environment.isSafe(frog.getPosition()) || environment.isWinningPosition(frog.getPosition())) {
-			return true;
-		} else {
-			return false;
-		}
+		// TODO
+		return environment.isWinningPosition(frog.getPosition());
 	}
 
 	/**
