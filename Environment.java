@@ -15,16 +15,22 @@ public class Environment implements IEnvironment {
 	private ArrayList<Lane> 
 		
 	// constructeurs
+	public Environment(Game game) {
 		
+	}
 	// methodes
 	public boolean is WinningPosition(Case c) {
-		
+		return c.ord == (game.height - 1);
 	}
 	
 	public boolean isSafe(Case c) {
+		
 	}
 	
 	public void update() {
+		for(Lane l : this.roadLane)  {
+			l.update();
+		}
 	}
 		
 	//TODO
