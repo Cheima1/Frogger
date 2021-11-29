@@ -11,7 +11,7 @@ public class LaneInf {
 
     private Game game;
     private ArrayList<CarInf> cars;
-    private boolean lToR;
+    private boolean leftToRight;
     private double density;
     private int timer;
     private int speed;
