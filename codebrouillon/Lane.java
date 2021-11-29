@@ -2,6 +2,7 @@ package environment;
 
 import java.util.ArrayList;
 
+import gameCommons.IEnvironment;
 import util.Case;
 import gameCommons.Game;
 
@@ -23,15 +24,11 @@ public class Lane {
 		// leftToRight
 
 	}
-	
+
 	public Lane(Game game, int ord) {
 		this(game, ord, game.defaultDensity);
 	}
-
 	//methode
-	// move Car sur le plateau
-	// removeCar
-	// 
 
 	public void update() {
 
@@ -45,24 +42,13 @@ public class Lane {
 		// elle ne bougent pas
 
 		// A chaque tic d'horloge, une voiture peut etre ajoutee
+		this.move();
+		this.mayAddCar();
+		//this.mayRemoveCar();
 
 	}
 
 	// TODO : ajout de methodes
-	
-	//public void removeCar() {
-	//TODO
-		 
-	 }
-	// public boolean iSafe(Case c){
-		//TODO
-	}
-	
-	// public void toString()
-		//TODO
-
-	// public void moveCarinLane() //TODO
-	
 
 	/*
 	 * Fourni : mayAddCar(), getFirstCase() et getBeforeFirstCase() 

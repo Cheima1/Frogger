@@ -22,6 +22,8 @@ public class Car {
 		this.leftToRight = leftToR;
 		this.leftPosition = leftPos;
 		this.length = (int) ((java.lang.Math.random() * 3) + 1);
+		this.colorRtL = Color.BLUE;
+		this.colorLtR = Color.BLACK;
 	}
 
 
@@ -39,32 +41,32 @@ public class Car {
 
 	// setter
 
-	/*public void setLength(int length) {
+	/* public void setLength(int length) {
 		this.length = length;
 	}*/
 
-	// Methode move
-	/** 
+	// methode move
+	/**
 	 * Bouge un vehicule selon son sens de circulation
 	 */
-	
+
 	public void move() {
 		if(leftToRight) {
 			leftPosition = new Case(leftPosition.absc + 1, leftPosition.ord);
 		} else {
-			leftPosition = new Case(lftPosition.absc - 1, leftPosition.ord);
+			leftPosition = new Case(leftPosition.absc - 1, leftPosition.ord);
 		}
 		this.addToGraphics();
 	}
-	
+
 	// Methode accident
 	/**
 	 * Savoir si un grenouille se fait percuter par un vehicule
-	 * @param : une case posG 
-	 * @return : un boolean si la voiture et la grenouille sont sur la même case alors on renvois true, 
+	 * @param : une case posG
+	 * @return : un boolean si la voiture et la grenouille sont sur la même case alors on renvois true,
 	 * false sinon
 	 */
-	
+
 	public boolean isAccident(Case posG) {
 		// utiliser isSafe
 		if (posG.ord == leftPosition.ord) {
@@ -73,14 +75,14 @@ public class Car {
 			return false;
 		}
 	}
-		
+
 	// Methode carAppears
 	/**
 	 * Savoir si on est dans la case de jeu
 	 * @return : un boolean true si la voiture apparait dans la fenetre de jeu et pas au-dela
 	 * false sinon
 	 */
-	
+
 	public boolean carAppears() {
 		int res = leftPosition.absc + length;
 		if (res > 0 || leftPosition.absc < game.width) {
@@ -98,7 +100,7 @@ public class Car {
 				color = colorLtR;
 			}
 			game.getGraphic()
-				.add(new Element(leftPosition.absc + i, leftPosition.ord, color));
+					.add(new Element(leftPosition.absc + i, leftPosition.ord, color));
 		}
 	}
 
