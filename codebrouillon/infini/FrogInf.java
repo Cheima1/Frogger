@@ -1,4 +1,4 @@
-package infiniteFrogger;
+//package infiniteFrogger;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
