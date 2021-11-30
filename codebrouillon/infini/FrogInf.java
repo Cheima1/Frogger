@@ -1,10 +1,12 @@
-//package infiniteFrogger;
+package frog;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
+import graphicalElements.Element;
 import util.Case;
 import util.Direction;
 
+import java.awt.*;
 import java.awt.image.DirectColorModel;
 
 public class FrogInf implements IFrog {
@@ -22,7 +24,7 @@ public class FrogInf implements IFrog {
     }
 
     // getter & Setter
-    public Case getPosition(){
+    public Case getPosition() {
         return this.position;
     }
 
@@ -35,37 +37,35 @@ public class FrogInf implements IFrog {
 
     public void move(Direction key) {
         this.direction = key;
-        if (key == Direction.left){
+        if (key == Direction.left) {
             if(position.absc > 0) {
                 position = new Case(position.absc - 1, position.ord);
             }
-        }
-        
-        else if (key == Direction.right){
-            if(position.absc < game.width - 1){
-                position = new Case(position.absc + 1, position.ord)
+        } else if (key == Direction.right) {
+            if (position.absc < game.width - 1){
+                position = new Case(position.absc + 1, position.ord);
             }
         }
-        
-        // rien ne change
-        
-        else if (key == Direction.down){
-            if(position.ord > 1){
-                position = new Case(position.absc, position.ord - 1);
-                --this.game.score;
-            }
-        } 
-        else if(key == Direction.up) {
-            positon = new Case(position.absc, position.ord + 1);
-            ++this.game.score;
-            if(this.game.score > this.game.maxScore) {
-                this.game.maxScore = this.game.score;
-                this.game.addLane();
-            }
-        }
+
+        // on ne change rien pour right et left mais pour down et up on change
+
+       if (Direction.up == key){
+           position = new Case(position.absc, position.ord);
+           this.game.score++;
+           if(this.game.score > this.game.maxScore) {
+               this.game.maxScore = this.game.score;
+               this.game.addLane();
+           }
+       } else if (Direction.down == key) {
+           if(position.ord > 1) {
+               position = new Case(position.absc, position.ord - 1);
+               this.game.score--; // quand on recule le score n'est pas comptabilisé
+           }
+       }
+
         this.game.getGraphic().add(new Element(position.absc, 1, Color.GREEN));
         this.game.testWin();
         this.game.testLose();
-        System.out.println(this.position.absc+""+ this.position + " score :");
+        System.out.println(this.position.absc + "" + this.position + " score :" + this.game.score);
+    }
 }
-
