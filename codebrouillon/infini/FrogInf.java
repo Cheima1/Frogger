@@ -13,14 +13,24 @@ public class FrogInf implements IFrog {
 
     // Attributs
 
+    // ca change pas
     private Game game;
     private Case position;
     private Direction direction;
 
+    // infini
+
+    private int score;
+
+
     public FrogInf(Game game) {
+        // ca change pas
         this.game = game;
         this.position = new Case(game.width / 2, 1);
         this.direction = Direction.up;
+        // infini
+        this.score = 0;
+
     }
 
     // getter & Setter
@@ -51,21 +61,20 @@ public class FrogInf implements IFrog {
 
        if (Direction.up == key){
            position = new Case(position.absc, position.ord);
-           this.game.score++;
-           if(this.game.score > this.game.maxScore) {
-               this.game.maxScore = this.game.score;
-               this.game.addLane();
-           }
+           this.score++;
+
+
+
        } else if (Direction.down == key) {
            if(position.ord > 1) {
                position = new Case(position.absc, position.ord - 1);
-               this.game.score--; // quand on recule le score n'est pas comptabilisé
+               this.score--;
            }
        }
 
         this.game.getGraphic().add(new Element(position.absc, 1, Color.GREEN));
         this.game.testWin();
         this.game.testLose();
-        System.out.println(this.position.absc + "" + this.position + " score :" + this.game.score);
+        System.out.println(this.position.absc + "" + this.position + " score :" + this.score);
     }
 }
