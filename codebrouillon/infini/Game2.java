@@ -6,6 +6,8 @@ import graphicalElements.IFroggerGraphics;
 import java.awt.*;
 import java.util.Random;
 import util.Case;
+import util.Direction;
+
 import javax.swing.text.Position;
 //import environment.EnvInf;
 
@@ -44,8 +46,8 @@ public class Game {
 		this.width = width;
 		this.height = height;
 		this.minSpeedInTimerLoops = minSpeedInTimerLoop;
-		this.defaultDensity = defaultDensity;
-		this.score = 0;
+		this.defaultDensity = defaultDensity; // apparition de voiture
+		this.score = 0; // comptabiliser le score
 	}
 
 	/**
@@ -107,14 +109,23 @@ public class Game {
 		testWin(); */
 		if(testLose()) {
 			graphic.clear();
-			graphic.endGameScreen(" Perdu ");
-			graphic.endGameScreen(" Votre score : " + this.score);
+			graphic.endGameScreen(" Perdu, Votre score : " + this.score);
 			return;
 		}
-		// on ne peut pas gagner
-		/*if(testWin()){
+
+		if(testWin()){
 			graphic.clear();
 			graphic.endGameScreen(" Gagne ");
 			return;
-		}*/
+		}
 	}
+	public Case getFrogPosition() {
+		return frog.getPosition();
+	}
+	public Direction getFrogDirection(){
+		return frog.getDirection();
+	}
+	/*public int getScore() {
+		return score;
+	}*/
+}
