@@ -42,6 +42,10 @@ public class FrogInf implements IFrog {
     public Direction getDirection() {
         return direction;
     }
+    
+    public void setDirection(Direction dir) {
+        this.direction = dir;
+    }
 
     // Methodes
 
@@ -68,9 +72,5 @@ public class FrogInf implements IFrog {
         this.game.testWin();
         this.game.testLose();
         System.out.println(this.position.absc + "" + this.position + " score :" + this.score);
-    }
-
-    public void setDirection(Direction dir) {
-        this.direction = dir;
     }
 }
