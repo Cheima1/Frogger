@@ -1,5 +1,3 @@
-// brouillon
-
 package frog;
 
 import gameCommons.Game;
@@ -59,8 +57,6 @@ public class FrogInf implements IFrog {
            position = new Case(position.absc, position.ord);
            this.game.score++;
 
-
-
        } else if (Direction.down == key) {
            if(position.ord > 1) {
                position = new Case(position.absc, position.ord - 1);
@@ -69,8 +65,10 @@ public class FrogInf implements IFrog {
        }
 
         this.game.getGraphic().add(new Element(position.absc, 1, Color.GREEN));
-        // this.game.testWin();
+        this.game.testWin();
         this.game.testLose();
         System.out.println(this.position.absc + "" + this.position + " score :" + this.game.score);
     }
+
+
 }
