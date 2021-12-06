@@ -121,7 +121,7 @@ public class Lane {
     private void mayRemoveCar() {
         for (int i = 0; i < cars.size(); i++) {
             Car current = cars.get(i);
-            if (current.getLeftPosition().ord >= game.width) {
+            if (current.getLeftPosition().absc >= game.width +2 || current.getLeftPosition().absc <=-2) {
                 cars.remove(current);
             }
         }
