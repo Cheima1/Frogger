@@ -72,7 +72,8 @@ public class EnvInf implements IEnvironment {
 
             // ---------------------------------
 
-            /* troisieme tentative : descendre toutes les lignes lorsque la posfrog == Direction.up (ne pas oublier de descendre les voitures */
+            /* troisieme tentative : descendre toutes les lignes lorsque la posfrog == Direction.up (ne pas oublier de descendre les voitures) et rajouter une
+            ligne*/
 
             if (game.getFrogDirection() == Direction.up) {
                 ArrayList<Lane> tmp = new ArrayList<Lane>();
