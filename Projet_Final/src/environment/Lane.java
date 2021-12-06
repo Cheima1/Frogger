@@ -12,6 +12,8 @@ public class Lane {
     private ArrayList<Car> cars = new ArrayList<>();
     private boolean leftToRight;
     private double density;
+    
+    // Case special
 
     private Car specialCase = null;
 
@@ -44,6 +46,8 @@ public class Lane {
         }
     }
 
+    // TODO : ajout de methodes
+    
     public void removeSpecialCase() {
         specialCase = null;
     }
@@ -74,8 +78,6 @@ public class Lane {
         }
 
     }
-
-    // TODO : ajout de methodes
 
     /*
      * Fourni : mayAddCar(), getFirstCase() et getBeforeFirstCase()
