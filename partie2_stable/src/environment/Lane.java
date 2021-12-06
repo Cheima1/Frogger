@@ -37,8 +37,8 @@ public class Lane {
         // A chaque tic d'horloge, une voiture peut etre ajoutee
 
         this.move();			// On commence par actualliser la position de nos voitures
-        this.mayAddCar();		// On vérifie si on peut ajouter une voiture à cette Lane
-        this.mayRemoveCar();	// On vérifie si des voitures sont sorties de l'écran
+        this.mayAddCar();		// On vÃ©rifie si on peut ajouter une voiture Ã  cette Lane
+        this.mayRemoveCar();	// On vÃ©rifie si des voitures sont sorties de l'Ã©cran
 
     }
 
@@ -61,9 +61,9 @@ public class Lane {
     }
 
     /**
-     * Vérifie si il y a une collision entre une voiture et la grenouille
+     * VÃ©rifie si il y a une collision entre une voiture et la grenouille
      * @param frogPos La position actuelle de la grenouille
-     * @return true si et seulement si la grenouille n'est entrée en collision
+     * @return true si et seulement si la grenouille n'est entrÃ©e en collision
      * 		   avec aucune voiture de cette Lane.
      */
     public boolean isSafe(Case frogPos) {
@@ -78,13 +78,13 @@ public class Lane {
     }
 
     /**
-     * On parcours tous les éléments de notre Lane, si une voiture
-     * sort de l'écran, on la supprime
+     * On parcours tous les Ã©lÃ©ments de notre Lane, si une voiture
+     * sort de l'Ã©cran, on la supprime
      */
     private void mayRemoveCar() {
         for (int i = 0; i < cars.size(); i++) {
             Car current = cars.get(i);
-            if (current.getLeftPosition().ord >= game.width) {
+            if (current.getLeftPosition().absc >= game.width +2 || current.getLeftPosition().absc <=-2) {
                 cars.remove(current);
             }
         }
