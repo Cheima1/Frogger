@@ -16,19 +16,19 @@ public class Environment implements IEnvironment {
         lanes = new ArrayList<>();
 
 
-        // On veut que la premi�re et la derni�re lignes soient vides.
-        // On commence donc par cr�er une premi�re ligne avec une densit� de 0
-        // (donc aucune voiture) � l'abscice 0 (position initiale de la grenouille)
+        // On veut que la premiere et la derniere lignes soient vides.
+        // On commence donc par creer une premiere ligne avec une densite de 0
+        // (donc aucune voiture) a l'abscice 0 (position initiale de la grenouille)
         lanes.add(new Lane(game, 0, 0.0));
 
-        // On cr�e ensuite les autres lignes de l'�cran en utilisant la
-        // densit� par d�faut (game.defaultDensity)
+        // On cree ensuite les autres lignes de l'ecran en utilisant la
+        // densite par defaut (game.defaultDensity)
         for (int i = 1; i < game.height-1; i++) {
             lanes.add(new Lane(game, i, game.defaultDensity));
         }
 
-        // Enfin on fini par cr�e la derni�re ligne avec une densit� de 0
-        // (donc aucune voiture) � l'abscice game.height-1 (derni�re ligne )
+        // Enfin on fini par cree la derniere ligne avec une densite de 0
+        // (donc aucune voiture) a l'abscice game.height-1 (derniere ligne )
         lanes.add(new Lane(game, game.height-1, 0.0));
     }
 
