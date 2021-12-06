@@ -17,7 +17,7 @@ public class Car {
 
     //TODO Constructeur(s)
 
-    // on construit une voiture qui va de droite � gauche et une longueur quelconque
+    // on construit une voiture qui va de droite a gauche et une longueur quelconque
 
     public Car(Game game, Case leftPos, boolean leftToR) {
         this.game = game;
